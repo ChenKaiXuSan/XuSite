@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* 静态文件空间 */
+li a {
+	color:green;
+}
+
+li {
+	color:blue;
+}
+
+/* body {
+	background: white url("images/background.png") no-repeat;
+} */

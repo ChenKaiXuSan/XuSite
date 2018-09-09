@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+ <link rel="icon" href="{% static 'blog/images/favicon.ico' %}">
+    
+<title>文章详情</title>
+
+<!-- Bootstrap core CSS -->
+    <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'blog/blog.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+{% if blog %}
+<h1>{{ blog.blog_title }}</h1>
+{% else %}
+<p>no article are available.</p>
+{% endif %}
+ 
+ {{ flag }}
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'blog/js/jquery.min.js' %}"><\/script>')</script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

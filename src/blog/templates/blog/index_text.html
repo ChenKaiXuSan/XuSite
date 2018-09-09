@@ -1,0 +1,34 @@
+<!-- css文件路径声明 -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+
+{% if blog %}
+    <ul>
+    {% for blog in blog %}
+        <li></li>{{ blog.get_all }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No blogs are exist.</p>
+{% endif %}
+
+<li>测试颜色</li>
+
+{{ author.get_all}}
+
+<!-- {% for author in author_first_name %}
+    <li>{{ author }}</li>
+{% empty %}
+    <li>no author exitst.</li>
+{% endfor %} -->
+
+{% for blog in blog %}
+    {{blog.get_all}}
+    <p>{{ blog.author}}</p>
+{%endfor%}
+
+
+
+
+
+
